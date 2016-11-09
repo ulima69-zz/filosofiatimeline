@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Filósofos Timeline</title>
+   <meta charset="UTF-8">
+
+  <style>
+    body, html {
+      font-family: arial, sans-serif;
+      font-size: 11pt;
+    }
+    span {
+      color: red;
+    }
+    span.large {
+      font-size: 200%;
+    }
+  </style>
+
+  <script src="js/vis.js"></script>
+  <link href="css/vis.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+<p>
+  Timeline dos Filósofos
+</p>
+
+
+<div id="visualization"></div>
+
+<script>
+  // create a couple of HTML items in various ways
+
+/*
+  var item_descartes = document.createElement('div');
+  item_descartes.appendChild(document.createTextNode('Descartes'));
+  item_descartes.appendChild(document.createElement('br'));
+  var img_descartes = document.createElement('img');
+  img_descartes.src = 'img/descartes.jpg';
+  img_descartes.style.width = '48px';
+  img_descartes.style.height = '48px';
+  item_descartes.appendChild(img_descartes);
+*/
+
+
+  var item_maquiavel = 'Maquiavel<br><span>Itália</span>';
+  var item_bacon = 'Bacon<br><span>Inglaterra</span>';
+  var item_kant = 'Kant<br><span>Alemanha</span>';
+  var item_hegel = 'Hegel<br><span>Alemanha</span>';
+  var item_descartes = 'Descartes<br><span>França</span>';
+  var item_leibniz = 'Leibniz<br><span>Alemanha</span>';
+  var item_espinoza = 'Espinoza<br><span>Holanda</span>';
+  var item_hobbes = 'Hobbes<br><span>Inglaterras</span>';
+  var item_berkeley = 'Berkeley<br><span>Irlanda</span>';
+  var item_locke = 'Locke<br><span>Inglaterra</span>';
+  var item_montesquieu = 'Montesquieu<br><span>França</span>';
+  var item_hume = 'Hume<br><span>Inglaterra</span>';
+  var item_rousseau = 'Rousseau<br><span>Suíça</span>';
+  var item_voltaire = 'Voltaire<br><span>França</span>';
+  var item_burke = 'Burke<br><span>Irlanda</span>';
+  var item_kierkegaard = 'Kiekegaard<br><span>Dinamarca</span>';
+  var item_schopenhauer = 'Schopenhauer<br><span>Alemanha</span>';
+  var item_mill = 'Mill<br><span>Inglaterra</span>';
+  var item_marx = 'Marx<br><span>Alemanha</span>';
+  var item_nietzsche = 'Nietzsche<br><span>Alemanha</span>';
+  var item_peirce = 'Peirce<br><span>EUA</span>';
+  var item_husserl = 'Husserl<br><span>Alemanha</span>';
+  var item_agostinho = 'Santo Agostinho<br><span>Argélia</span>';
+  var item_aquino = 'São Tomás de Aquino<br><span>Itália</span>';
+/*
+  var item_hegel = 'Hegel<br><span>Alemanha</span><img src="img/hegel.jpg" style="width: 48px; height: 48px;">';
+*/
+
+  // create data and a Timeline
+  var container = document.getElementById('visualization');
+  var items = new vis.DataSet([
+    
+    {id: 6, 	content: item_maquiavel	  ,start: '1469-05-03'},
+    {id: 7, 	content: item_bacon		    ,start: '1561-01-22'},
+    {id: 8, 	content: item_descartes	  ,start: '1596-03-31'},
+    {id: 9, 	content: item_leibniz	  	,start: '1646-07-01'},
+    {id: 10, 	content: item_espinoza  	,start: '1632-11-24'},
+    {id: 11, 	content: item_hobbes	    ,start: '1588-04-05'},
+    {id: 12, 	content: item_berkeley		,start: '1685-03-12'},
+    {id: 13, 	content: item_locke		    ,start: '1632-08-29'},
+    {id: 14, 	content: item_montesquieu ,start: '1689-01-18'},
+    {id: 15, 	content: item_hume			  ,start: '1711-05-07'},
+    {id: 16, 	content: item_rousseau		,start: '1712-06-28'},
+    {id: 17, 	content: item_voltaire	  ,start: '1694-11-21'},
+    {id: 18, 	content: item_burke		    ,start: '1729-01-12'},
+    {id: 19, 	content: item_kant			  ,start: '1724-04-22'},
+    {id: 20, 	content: item_hegel	    	,start: '1770-08-27'},
+    {id: 21, 	content: item_kierkegaard	,start: '1813-05-05'},
+    {id: 22, 	content: item_schopenhauer,start: '1788-02-22'},
+    {id: 23, 	content: item_mill			  ,start: '1806-05-20'},
+    {id: 24, 	content: item_marx			  ,start: '1818-05-05'},
+    {id: 25, 	content: item_nietzsche	  ,start: '1844-10-15'},
+    {id: 26, 	content: item_peirce	    ,start: '1839-09-10'},
+    {id: 27, 	content: item_husserl	  	,start: '1859-04-08'},
+    {id: 28, 	content: item_agostinho	  ,start: '0354-01-01'},
+    {id: 29, 	content: item_aquino	  ,start: '1225-01-01'}
+  ]);
+  var options = {};
+  var timeline = new vis.Timeline(container, items, options);
+</script>
+</body>
+</html>
